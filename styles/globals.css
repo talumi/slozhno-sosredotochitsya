@@ -22,6 +22,18 @@ p {
   margin: 0;
 }
 
+h2, h3 {
+  font-size: 18px;
+  line-height: 1.3em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.3em;
+  font-weight: normal;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -39,4 +51,8 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+section {
+  margin-top: 50px;
 }
