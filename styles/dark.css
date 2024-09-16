@@ -9,4 +9,18 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --background: url('../images/cover-image-dark.png');
+  --menu-theme-color: #FF0070;
+  --menu-theme-hover-color: #FF007066;
+  --banner-color: #DB00FF;
+  --banner-shadow-color: #FF0070;
+  --accent-color: #FF0070;
+  --accent-color-light: #FF007066;
+  --primary-color: #F1B2CE;
+  --title-color: #FF0070;
+  --title-decor-color: #000028;
+}
+
+.theme_dark .rec {
+  visibility: visible;
 }
