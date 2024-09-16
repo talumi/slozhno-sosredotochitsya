@@ -248,6 +248,7 @@
 
   .header__theme-menu {
     grid-column: 2/3;
+    align-self: end;
     margin-block-end: 40px;
   }
 
@@ -264,10 +265,6 @@
     grid-row: 3/4;
     align-self: start;
     margin-block-start: 28px;
-  }
-
-  .header__theme-menu {
-    align-self: end;
   }
 
   .reasons {
