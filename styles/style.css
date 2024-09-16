@@ -1,21 +1,20 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  min-inline-size: 375px;
-  max-inline-size: 1024px;
-  inline-size: 100%;
-  margin: auto;
   align-items: center;
+  margin: auto;
+  color: var(--primary-color);
+  font-family: var(--main-font, sans-serif);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.3em;
   background-image: var(--background);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: var(--main-font, sans-serif);
-  font-weight: normal;
-  color: var(--primary-color);
-  font-size: 18px;
-  line-height: 1.3em;
+  min-inline-size: 375px;
+  max-inline-size: 1024px;
+  inline-size: 100%;
 }
 
 .content-section {
@@ -33,55 +32,55 @@
 }
 
 .decorated-zone::before {
-  position: absolute;
   content: '';
-  inline-size: 25px;
-  block-size: 25px;
+  position: absolute;
+  z-index: -1;
   border-top: 1px solid var(--menu-theme-color);
   border-right: 1px solid var(--menu-theme-color);
+  inline-size: 25px;
+  block-size: 25px;
   inset-inline-end: var(--padding);
   inset-block-start: var(--padding);
-  z-index: -1;
 }
 
 .decorated-zone::after {
-  position: absolute;
   content: '';
+  position: absolute;
+  z-index: -1;
+  border-inline-start: 1px solid var(--menu-theme-color);
+  border-block-end: 1px solid var(--menu-theme-color);
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--menu-theme-color);
-  border-inline-start: 1px solid var(--menu-theme-color);
   inset-block-end: var(--padding);
   inset-inline-start: var(--padding);
-  z-index: -1;
 }
 
 .rec {
-  color: var(--accent-color);
   position: absolute;
+  color: var(--accent-color);
   line-height: 25px;
   inset-block-start: var(--padding);
   inset-inline-end: calc(28px + var(--padding));
 }
 
 .rec::after {
-  position: absolute;
   content: '';
+  position: absolute;
+  z-index: -1;
+  margin-inline-start: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
   inline-size: 9px;
   block-size: 9px;
   inset-block-start: 8px;
-  margin-inline-start: 10px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
-  z-index: -1;
 }
 
 .header {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  padding-block-start: var(--padding);
   margin-block-end: 40px;
+  padding-block-start: var(--padding);
 }
 
 .header__theme-menu {
@@ -96,20 +95,20 @@
 }
 
 .header__theme-menu-button {
+  align-items: center;
   box-sizing: border-box;
-  block-size: 26px;
-  text-transform: lowercase;
-  font-size: 18px;
-  line-height: 1em;
+  border: none;
+  border-radius: 0;
+  padding: 0 13px 0 13px;
   color: var(--menu-theme-color);
   font-family: 'IBM Plex mono';
   font-weight: normal;
-  border-radius: 0;
-  padding: 0 13px 0 13px;
-  border: none;
+  font-size: 18px;
+  line-height: 1em;
+  text-transform: lowercase;
   background-color: transparent;
-  align-items: center;
   cursor: pointer;
+  block-size: 26px;
 }
 
 .header__theme-menu-button:hover {
@@ -130,25 +129,25 @@
 }
 
 .header__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-weight: bold;
-  color: var(--banner-color);
-  text-shadow: 4px 4px 0 var(--banner-shadow-color);
-  line-height: 0.83em;
   margin-block-end: 55px;
+  color: var(--banner-color);
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.83em;
+  text-shadow: 4px 4px 0 var(--banner-shadow-color);
 }
 
 .header__description {
-  columns: 2/3;
+  font-weight: bold;
   font-size: 18px;
   line-height: 1.3em;
-  font-weight: bold;
+  columns: 2/3;
   block-size: fit-content;
 }
 
 .title-decor {
-  background-color: var(--accent-color);
   color: var(--title-decor-color);
+  background-color: var(--accent-color);
 }
 
 .title {
@@ -160,9 +159,9 @@
 
 .subtitle {
   margin-block-start: 20px;
+  font-weight: bold;
   font-size: 18px;
   line-height: 1.3em;
-  font-weight: bold;
 }
 
 .card-list {
@@ -179,8 +178,8 @@
 }
 
 .card__text {
-  font-weight: normal;
   margin-block-start: 10px;
+  font-weight: normal;
 }
 
 .card__link {
@@ -202,9 +201,9 @@
 }
 
 .gallery-list {
-  margin-block-start: 10px;
   display: grid;
   gap: 10px;
+  margin-block-start: 10px;
 }
 
 .image {
@@ -214,17 +213,17 @@
 
 .footer {
   display: flex;
-  margin-block-start: 40px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-block-start: 40px;
 }
 
 .footer__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--banner-color);
   font-weight: bold;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.825em;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (min-width: 768px) {
@@ -239,12 +238,12 @@
   }
 
   .header {
-    gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    margin-block-end: 60px;
     padding-inline-start: 0;
     padding-block-start: 0;
-    margin-block-end: 60px;
   }
 
   .header__theme-menu {
@@ -253,18 +252,18 @@
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     grid-column: 1/3;
     grid-row: 2/3;
     align-self: center;
     margin-block: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__description {
-    margin-block-start: 28px;
     grid-column: 2/3;
     grid-row: 3/4;
     align-self: start;
+    margin-block-start: 28px;
   }
 
   .header__theme-menu {
@@ -292,14 +291,18 @@
   }
 
   .problems-list {
-    grid-row: 2/3;
     grid-column: 1/3;
+    grid-row: 2/3;
   }
 
   .advices {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
+  }
+
+  .advices .card__title {
+    font-weight: normal;
   }
 
   .subtitle {
@@ -318,17 +321,17 @@
   }
 
   .image-ice-cream {
-    object-fit: cover;
-    block-size: 100%;
     grid-column: 3/4;
     grid-row: 1/3;
+    object-fit: cover;
+    block-size: 100%;
   }
 
   .image-tape {
+    grid-column: 1/2;
+    grid-row: 2/4;
     object-fit: cover;
     block-size: 100%;
-    grid-row: 2/4;
-    grid-column: 1/2;
   }
 
   .image-books {
@@ -361,8 +364,8 @@
     grid-column: 1/-1;
     justify-self: center;
     align-self: start;
-    margin-block-start: 20px;
     margin-inline-start: 20px;
+    margin-block-start: 20px;
   }
 
   .header__theme-menu-list {
