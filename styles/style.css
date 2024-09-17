@@ -4,7 +4,7 @@
   align-items: center;
   margin: auto;
   color: var(--primary-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.3em;
@@ -30,26 +30,25 @@
   block-size: max(668px, 100vh);
 }
 
-.decorated-zone::before {
+.decorated-zone::before,
+.decorated-zone::after {
   content: '';
   position: absolute;
   z-index: -1;
-  border-top: 1px solid var(--menu-theme-color);
-  border-right: 1px solid var(--menu-theme-color);
   inline-size: 25px;
   block-size: 25px;
+}
+
+.decorated-zone::before {
+  border-top: 1px solid var(--menu-theme-color);
+  border-right: 1px solid var(--menu-theme-color);
   inset-inline-end: var(--padding);
   inset-block-start: var(--padding);
 }
 
 .decorated-zone::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
   border-inline-start: 1px solid var(--menu-theme-color);
   border-block-end: 1px solid var(--menu-theme-color);
-  inline-size: 25px;
-  block-size: 25px;
   inset-block-end: var(--padding);
   inset-inline-start: var(--padding);
 }
@@ -60,6 +59,7 @@
   line-height: 25px;
   inset-block-start: var(--padding);
   inset-inline-end: calc(28px + var(--padding));
+  visibility: var(--visability);
 }
 
 .rec::after {
@@ -100,7 +100,7 @@
   border-radius: 0;
   padding: 0 13px 0 13px;
   color: var(--menu-theme-color);
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 1em;
@@ -368,6 +368,11 @@
     flex-direction: row;
   }
 
+  .header__title,
+  .footer__title {
+    --banner-shadow-color: var(--banner-shadow-large-screen-color);
+  }
+
   .header__description {
     margin-block-start: 38px;
   }
@@ -384,5 +389,25 @@
 
   .advices {
     gap: 10px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --visability: visible;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: url('../images/cover-image-light.png');
+    --accent-color: #FF8DCB;
+    --primary-color: #353430;
+    --banner-color: #FFC2E6;
+    --menu-theme-color: #353430;
+    --menu-theme-hover-color: #35343066;
+    --title-color: #353430;
+    --title-decor-color: #353430;
+    --visability: hidden;
   }
 }
