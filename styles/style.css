@@ -13,7 +13,6 @@
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 375px;
-  max-inline-size: 1024px;
   inline-size: 100%;
 }
 
@@ -223,7 +222,7 @@
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.825em;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--banner-shadow-color);
 }
 
 @media (min-width: 768px) {

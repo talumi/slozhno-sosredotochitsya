@@ -23,6 +23,13 @@
   visibility: hidden;
 }
 
+@media (max-width: 1024px) {
+  .theme_light .header__title,
+  .theme_light .footer__title {
+    --banner-shadow-color: #FF8DCB;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   
   :root {
@@ -39,4 +46,13 @@
   .rec {
     visibility: hidden;
   }
+
+  @media (max-width: 1024px) {
+    .header__title,
+    .footer__title {
+      --banner-shadow-color: #FF8DCB;
+    }
+  }
 }
+
+
