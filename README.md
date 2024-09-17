@@ -1,1 +1,1 @@
-https://github.com/talumi/posmotri_v_okno.git
+https://github.com/talumi/slozhno-sosredotochitsya.git
