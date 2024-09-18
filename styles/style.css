@@ -370,7 +370,7 @@
 
   .header__title,
   .footer__title {
-    --banner-shadow-color: var(--banner-shadow-large-screen-color);
+    --banner-shadow-color: var(--banner-shadow-accent-color);
   }
 
   .header__description {
@@ -404,6 +404,7 @@
     --accent-color: #FF8DCB;
     --primary-color: #353430;
     --banner-color: #FFC2E6;
+    --banner-shadow-color: #FF8DCB;
     --menu-theme-color: #353430;
     --menu-theme-hover-color: #35343066;
     --title-color: #353430;
